@@ -21,6 +21,7 @@ export const createTask = async (state: FormState, formData: FormData) => {
             await TaskModel.create(newTask)
         } catch (error) {
             state.error = 'fail to create new task'
+            console.log(error);
             return state;
         }
 
@@ -40,6 +41,7 @@ export const updateTask = async (id: string, state: FormState, formData: FormDat
             await TaskModel.updateOne({_id: id}, updateTask) //_idはmongoDBのidなので_が必要
         } catch (error) {
             state.error = 'fail to update task'
+            console.log(error);
             return state;
         }
 
@@ -52,6 +54,7 @@ export const deleteTask = async (id: string, state: FormState) => {
             await TaskModel.deleteOne({_id: id}) //_idはmongoDBのidなので_が必要
         } catch (error) {
             state.error = 'fail to delete task'
+            console.log(error);
             return state;
         }
 
