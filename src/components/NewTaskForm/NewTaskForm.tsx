@@ -41,6 +41,7 @@ const NewTaskForm = () => {
                         Expire Date
                     </label>
                     <input
+                        lang="en"
                         type="date"
                         id="dueDate"
                         name="dueDate"
