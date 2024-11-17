@@ -8,15 +8,6 @@ const NewTaskForm = () => {
     const initialState: FormState = { error: '' }
     const [state, formAction] = useFormState(createTask, initialState)
     const { pending } = useFormStatus();
-    // const SubmitButton = () => {
-    //     const { pending } = useFormStatus();
-    //     return (
-    //         <button type='submit' className="mt-8 py-2 w-full rounded-md text-white bg-gray-800 hover-bg-gray-700 text-sm font-semibold shadow-sm disabled:bg-gray-400" 
-    //         disabled={pending}>
-    //         Create
-    //     </button>
-    //     )
-    // }
 
     return (
         <div className="mt-10 mx-auto w-full max-w-sm">NewTaskForm
